@@ -73,4 +73,54 @@ UIView *sv = [UIView new];
 	
 ### 布局UIScrollView
 	
-	
+	我们都知道UIScrollView是有点不一样的，他要先知道contentSize，但是了contentSize 又要依赖于他本身，看下面的代码我们如何实现这样一个自动布局
+	
+```oc
+	UIScrollView *scrollView = [[UIScrollView alloc] init];
+	scrollView.backgroundColor = [UIColor whiteColor];
+	[sv addSubview:scrollView];
+	[scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+   	 	make.edges.equalTo(sv).with.insets(UIEdgeInsetsMake(5,5,5,5));
+	}];
+	
+	UIView *containter = [UIView new];
+	[scrollView addSubview:container];
+	[container mas_makeConstraints:^(MASConstraintMaker *make) {
+    		make.edges.equalTo(scrollView);
+    		make.width.equalTo(scrollView);
+	}];
+	
+	int count = 10;
+	UIView *lastView = nil;
+	for ( int i = 1 ; i <= count ; ++i ) {
+	    UIView *subv = [UIView new];
+	    [container addSubview:subv];
+	    subv.backgroundColor = [UIColor colorWithHue:( arc4random() % 256 / 256.0 )
+	                                      saturation:( arc4random() % 128 / 256.0 ) + 0.5
+	                                      brightness:( arc4random() % 128 / 256.0 ) + 0.5
+	                                           alpha:1];
+	     
+	    [subv mas_makeConstraints:^(MASConstraintMaker *make) {
+	        make.left.and.right.equalTo(container);
+	        make.height.mas_equalTo(@(20*i));
+	         
+	        if ( lastView ) {
+	            make.top.mas_equalTo(lastView.mas_bottom);
+	        }
+	        else {
+	            make.top.mas_equalTo(container.mas_top);
+	        }
+	    }];
+	     
+	    lastView = subv;
+	}
+	[container mas_makeConstraints:^(MASConstraintMaker *make) {
+	    make.bottom.equalTo(lastView.mas_bottom);
+	}];
+```
+这里的关键就在于container这个view起到了一个中间层的作用 能够自动的计算uiscrollView的contentSize
+
+### 小结
+	
+	Masonry 是一个非常优秀的autolayout的库，他里面还有很多高级的玩法，大家有兴趣的可以去看他的demo。
+	
