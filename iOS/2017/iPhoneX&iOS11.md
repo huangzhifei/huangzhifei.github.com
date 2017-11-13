@@ -90,19 +90,25 @@
 
    磨人的小妖精呀，基本上项目中遍地都是tableview，但是这次她出了问题
    a、groupe 样式下的 setion header \ footer 高度很大，解决办法
-   
-      ```oc
+
       _tableView.estimatedRowHeight = 0;
       _tableView.estimatedSectionHeaderHeight = 0;
       _tableView.estimatedSectionFooterHeight = 0;
-      ```  
    
    b、push 动画进来的时候，会有明显的从下往上偏移的动画，解决办法
    
    ```oc
    if (@available(iOS 11.0, *)) {
-   		_tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+      _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
    }
    ```
    
+   c、有时候 UITableView 与他里面的容器view (UITableViewWrapperView） 大小不一致，不管你怎么调整tableveiew的
+   布局，死活是莫名其妙的有 20 的差距，使用下面的代码解决(这个不是iOS 11的适配，反而ios 11 下面没有)
+   
+   ```oc
+   if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+   ```
    
