@@ -1,6 +1,6 @@
-###iPhone X & iOS 11 适配
+### iPhone X 和 iOS 11 适配
 
-1、缺少iPhone X的启动图
+####1、缺少iPhone X的启动图
 
    在 xcassets 中添加LaunchImage，他里面就会出现 iPhoneX的启动图。
 	
@@ -86,9 +86,10 @@
     }
   ```
  
-3、tableView
+####3、tableView
 
-   磨人的小妖精呀，基本上项目中遍地都是tableview，但是这次她出了问题
+   磨人的小妖精呀，基本上项目中遍地都是tableview，但是这次她出了问题！
+   
    a、groupe 样式下的 setion header \ footer 高度很大，解决办法
 
       _tableView.estimatedRowHeight = 0;
@@ -108,7 +109,84 @@
    
    ```oc
    if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
+       self.automaticallyAdjustsScrollViewInsets = NO;
+   }
    ```
    
+####4、搜索框调整
+   iOS 11 使用新方法将搜索框附着到导航栏上。它需要把UISearchController赋值给navigationItem，看下面的代码
+   
+   ```oc
+   self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+   self.searchController.searchResultsUpdater = self;
+   self.searchController.delegate = self;
+   self.searchController.dimsBackgroundDuringPresentation = NO;
+   self.searchController.hidesNavigationBarDuringPresentation = NO;
+
+   self.searchController.searchBar.barTintColor = [UIColor colorWithRGB:0xf0f0f0];
+   self.searchController.searchBar.placeholder = @"搜索";
+
+   // 重要：参考 http://www.cocoachina.com/ios/20160805/17298.html
+   self.definesPresentationContext = YES;
+   if (@available(iOS 11.0, *)) {
+      self.navigationItem.searchController = self.searchController;
+   } else {
+      self.tableView.tableHeaderView = self.searchController.searchBar;
+   }
+```
+   
+   
+####5、导航栏的高度
+   
+   对于需要计算顶部高度的地方，应该动态获取状态栏和导航栏高度：
+   
+   ```oc
+   
+   // 动态获取状态栏高度 
+   CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame]; 
+   // 动态获取标题栏高度
+   CGRect navRect = self.navigationController.navigationBar.frame; 
+   CGFloat topHeight = statusRect.size.height + navRect.size.height;
+   
+   ```
+   
+   对于需要计算 iPhone X 底部 homeIndicator 高度的地方，可以使用下面的代码：
+   
+   ```oc
+   
+   // 方法一：
+   CGFloat bottomHeight = 0;
+   if (@available(iOS 11.0, *)) {
+       bottomHeight = [#ViewController#.view safeAreaInsets].bottom;
+   }
+
+   // 或方法二：
+   #define IS_iPhoneX ([UIScreen mainScreen].bounds.size.height == 812.0)
+   if (IS_iPhoneX) {
+       bottomHeight = 34.f;
+   }
+   
+   ```
+   
+   对于使用 Masonry 写 autoLayout 的，可以像下面这样：
+   
+   ```oc
+   [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+      make.leading.mas_equalTo(0);
+      make.trailing.mas_equalTo(0);
+      make.top.mas_equalTo(0);
+
+      if (@available(iOS 11.0, *)) {
+          make.bottom.mas_equalTo(weakSelf.view.mas_safeAreaLayoutGuideBottom);
+      } else {
+          make.bottom.mas_equalTo(0);
+      }
+    }];
+   
+   ```
+   
+   
+#### 总结
+    目前基本上主要也就是这些地方需要适配，对于那些支持横屏的应用，那就要多少考虑一下安全区域了，如果只是竖屏应用，其实只要解决好
+    tableview的安全适配基本上就没有什么问题了。
+    
