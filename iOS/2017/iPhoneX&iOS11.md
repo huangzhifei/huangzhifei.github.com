@@ -92,7 +92,17 @@
    a、groupe 样式下的 setion header \ footer 高度很大，解决办法
    
       ```oc
-      self.tableView.estimatedRowHeight = 0;
-self.tableView.estimatedSectionHeaderHeight = 0;
-self.tableView.estimatedSectionFooterHeight = 0;
+      _tableView.estimatedRowHeight = 0;
+      _tableView.estimatedSectionHeaderHeight = 0;
+      _tableView.estimatedSectionFooterHeight = 0;
       ```  
+   
+   b、push 动画进来的时候，会有明显的从下往上偏移的动画，解决办法
+   
+   ```oc
+   if (@available(iOS 11.0, *)) {
+   		_tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+   }
+   ```
+   
+   
