@@ -67,13 +67,18 @@ UIView *sv = [UIView new];
 - (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block;
 ```
 	说明：
-	mas_makeConstraints 只负责新增约束 Autolayout不能同时存在两条针对于同一对象的约束 否则会报错 	mas_updateConstraints 针对上面的情况会更新在block中出现的约束不会导致出现两个相同约束的情况，其实使用update是可以代替make的	mas_remakeConstraints 则会清除之前的所有约束 仅保留最新的约束2. MACRO 宏
+	mas_makeConstraints 只负责新增约束 Autolayout不能同时存在两条针对于同一对象的约束 否则会报错 
+	mas_updateConstraints 针对上面的情况会更新在block中出现的约束不会导致出现两个相同约束的情况，其实使用update是可以代替make的
+	mas_remakeConstraints 则会清除之前的所有约束 仅保留最新的约束
+
+
+2. MACRO 宏
 	equalTo 和 mas_equalTo 的区别在哪里呢? 其实 mas_equalTo 是一个 MACRO,他支持的类型除了了NSNumber之外，还支持CGPoint、CGSize、UIEdgeInsets。
 	
 	
 ### 布局UIScrollView
 	
-	我们都知道UIScrollView是有点不一样的，他要先知道contentSize，但是了contentSize 又要依赖于他本身，看下面的代码我们如何实现这样一个自动布局
+我们都知道UIScrollView是有点不一样的，他要先知道contentSize，但是了contentSize 又要依赖于他本身，看下面的代码我们如何实现这样一个自动布局
 	
 ```oc
 	UIScrollView *scrollView = [[UIScrollView alloc] init];
@@ -118,7 +123,8 @@ UIView *sv = [UIView new];
 	    make.bottom.equalTo(lastView.mas_bottom);
 	}];
 ```
-这里的关键就在于container这个view起到了一个中间层的作用 能够自动的计算uiscrollView的contentSize
+
+这里的关键就在于container这个view起到了一个中间层的作用 能够自动的计算uiscrollView的contentSize
 
 ### 小结
 	
