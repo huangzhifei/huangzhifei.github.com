@@ -3,7 +3,7 @@
 可以参考百度的push sdk文档 [http://push.baidu.com/doc/ios/api]()
 
 
-下面是个人总结
+***下面是个人总结***
 
 #### 1、正常创建 app id 记得添加 push notifications 的选项
 
