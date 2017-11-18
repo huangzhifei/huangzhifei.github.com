@@ -1,5 +1,7 @@
 ### **会持续更新......**
 
+建议大家直接看 git 的官方翻译 [https://git-scm.com/book/zh/v1]()
+
 使用 **git --help** 会显示出所有的命令，这篇文章存在的目的是为了更好的说明其中一些常用的命令。
 
 其实最好的方法是自己在 github 上面创建一个项目，把命令过一遍，其实在你使用 git 命令的时候，控制台都有相应的提示。
@@ -75,14 +77,16 @@ git log
 ### 1、获取远端最新内容
 
 ```
-git pull 或 git pull origin master 或 git fetch
+git pull 或 git pull origin xxxx 或 git fetch
 ```
+不带 xxxx 就是默认是获取当前，带上 xxxx 就是指定 xxxx 分支来获取
 
 ### 2、推送内容到远端
 
 ```
-git push 或 git push origin master
+git push 或 git push origin xxxx
 ```
+不带 xxxx 就是默认推送到当前分支，带上 xxxx 就是指定推送到 xxxx 分支
 
 ### 3、提交
 
@@ -116,7 +120,7 @@ git tag xxx
 ```
 git tag -a xxx -m 'first version'
 ```
-这样打出的 tag， -m 后面带的就是注释信息，方便日后查看（***目前还没有找到哪里会显示这个附加信息）***
+这样打出的 tag， -m 后面带的就是注释信息，方便日后查看***（可以在github的release下面看到，每一个tag后面会带上···,展开就能看到）***
 
 ### 2、删除 tag
 很简单，只要知道 tag 的名字就行了
@@ -149,4 +153,56 @@ git push origin tagname
 ```
 这样推送指定的 tagname 到远端
 
+
+## 分支相关
+
+### 1、查看所有分支
+
+```
+git branch -a
+```
+这个命令用来查看远端的所有分支（但是如果本地没有fetch到远端的更新，这个命令看到分支列表可能不一定对）
+
+
+```
+git branch -r
+```
+查看远端分支（但是如果本地没有fetch到远端的更新，这个命令看到分支列表可能不一定对）
+
+```
+git branch
+```
+查看本地所有的分支
+
+### 2、创建分支
+
+```
+git branch xxxx
+```
+这样会在本地创建一个名叫 xxxx 的分支
+
+```
+git push origin xxxx
+```
+这样就会把刚才在本地创建的 xxxx 的分支推送到远端，相当于在远端创建了这个分支
+
+### 3、删掉分支
+
+```
+git branch -D xxxx
+```
+这样只是删掉了本地的分支
+
+```
+git push origin :xxxx 或
+git push origin --delete xxxx
+```
+然后通过这条命令把删掉的分支 xxxx 推送到远端，同步一下信息
+
+### 4、切换到对应的分支
+
+```
+git checkout xxxx
+```
+xxxx 为对应的分支名字，这样就能切换到对应的分支上面
 
