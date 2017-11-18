@@ -43,3 +43,19 @@ git commit --amend
 ```
 会弹出上次 commit 的信息，可以编辑，如果不想编辑，直接退出就好了
 
+##### 3、丢弃本地所有改动
+```
+git reset --hard 
+或
+git reset --hard origin/master
+```
+
+##### 4、获取远端版本
+```
+git pull 或 git pull origin master 或 git fetch
+```
+
+##### 5、推送代码到远端
+```
+
+```
