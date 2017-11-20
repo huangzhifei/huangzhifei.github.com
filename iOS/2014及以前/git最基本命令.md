@@ -69,7 +69,28 @@ git log
 ```
 比如查看本地的commit信息等等
 
-### 6、回滚
+### 6、撤销远程（Revert）
+
+revert 撤销一个提交的同时会创建一个新的提交，这是一个安全的方法，他不会更改提交的历史日志。
+
+ ```
+ git revert HEAD 185ffde44f04695d73cf782233a0ae9aab615c2f
+ ```
+后面一长串值为你将要撤销的commit的hash值
+
+
+### 7、撤销本地 (Reset)
+
+撤销本地的某次提交
+
+```
+git reset HEAD 或
+git reset 057dc 或
+git reset HEAD~3
+```
+回退到上一次提交到状态，
+或者回退到057dc的版本,
+或者回退3个版本。
 
 
 ## 提交与更新相关
