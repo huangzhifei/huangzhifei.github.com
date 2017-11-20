@@ -14,7 +14,7 @@
 
 **a、此文件已经在版本控制中，但是还没有被add(也就是不是新加的文件)**
 
-在使用 git status 查看的时候，就会提示你这些命令，使用下面的命令就行
+a、在使用 git status 查看的时候，就会提示你这些命令，使用下面的命令就行
 
 ```
 git checkout -- file
@@ -23,7 +23,7 @@ git checkout -- file
    
 **b、此文件已经在版本控制中，并且已经 add 了**
 
-在使用 git status 查看的时候，就会提示你下面的命令
+b、在使用 git status 查看的时候，就会提示你下面的命令
 
 ```
 git reset HEAD file
