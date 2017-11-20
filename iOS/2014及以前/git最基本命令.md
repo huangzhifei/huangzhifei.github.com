@@ -198,10 +198,11 @@ git branch
 ### 2、创建分支
 
 ```
-git branch xxxx
+git branch xxxx 或
+git branch xxxxname commit id
 ```
-这样会在本地创建一个名叫 xxxx 的分支
-
+第一条命令这样会从当前节点在本地创建一个名叫 xxxxname 的分支
+第二条命令会从 commit id 这个节点创建名叫 xxxxname 分支
 ```
 git push origin xxxx
 ```
