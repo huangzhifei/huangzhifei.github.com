@@ -141,7 +141,7 @@ git tag xxx
 ```
 git tag -a xxx -m 'first version'
 ```
-这样打出的 tag， -m 后面带的就是注释信息，方便日后查看**（可以在github的release下面看到，每一个tag后面会带上···,展开就能看到）**
+这样打出的 tag， -m 后面带的就是注释信息，方便日后查看 **（可以在github的release下面看到，每一个tag后面会带上···,展开就能看到）**
 
 ### 2、删除 tag
 很简单，只要知道 tag 的名字就行了
