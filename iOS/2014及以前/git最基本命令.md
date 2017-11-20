@@ -231,3 +231,12 @@ xxxx 为对应的分支名字，这样就能切换到对应的分支上面
 
 ## 合并
 
+### 1、分支合并
+
+```
+git checkout master
+git merge dev_1
+```
+
+先切到 master 分支上面，然后合并 dev_1 到 master 上面，如果有冲突就解决冲突，然后提交 commit， 最后 push，如果没有冲突，就正常提交 commit，然后 push
+
