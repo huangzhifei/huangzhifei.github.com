@@ -19,3 +19,8 @@ XCode release 编译默认会生成 dSYM 文件， 而 Debug 编译默认不会�
 
 ![](https://huangzhifei.github.com/images/BitcodedSYM.jpg)
 
+### 存在路径
+
+有很多方式去查看这个 dSYM 文件的路径，这里直接给定一个路径 /Users/<用户名>/Library/Developer/Xcode/Archives 目录下，对于每一个发布版本我们都很有必要保存对应的 Archives 文件。
+
+
