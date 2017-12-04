@@ -10,7 +10,7 @@ clangformat文件下载
 
 [https://huangzhifei.github.com/resources/clang-format.zip]()
 
-在 macOS Sierra（10.12）以上，插件会自动被加载，我们要去  系统偏好--->插件 里面检查这个插件是否正确加载
+在 macOS Sierra（10.12）以上，插件会自动被加载，我们要去  系统偏好--->扩展 里面检查这个插件是否正确加载
 
 ![](https://huangzhifei.github.com/images/xcodeClangSetting.png)
 
