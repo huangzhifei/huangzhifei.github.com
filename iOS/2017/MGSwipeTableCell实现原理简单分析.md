@@ -17,7 +17,7 @@
 
 ### 3、手势
 
-MGSwipeTableCell 内部滑动手势并没有使用 UISwipeGestureRecognizer，而是使用 UIPanGestureRecognizer，这样可能都不需要处理左滑返回的手势冲突
+MGSwipeTableCell 内部滑动手势并没有使用 UISwipeGestureRecognizer，而是使用 UIPanGestureRecognizer.
 
 
 ### 4、结束菜单
