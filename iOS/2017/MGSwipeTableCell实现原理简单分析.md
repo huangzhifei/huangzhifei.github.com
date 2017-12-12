@@ -48,3 +48,10 @@ MGSwipeTableCell 内部滑动手势并没有使用 UISwipeGestureRecognizer，�
 ### 总结
 
 源码里面有很多细节，很值得仔细分析与学习。
+
+### 自己如何简单实现
+
+[看后面部分内容](http://www.aizhuanji.com/a/7w2dJdJW.html)
+
+一句话总结就是在你的 view 下面放一个含有左右要出现的菜单，然后上面放你实际的内容盖住，增加手势，左右滑动调整约束来展示。
+
