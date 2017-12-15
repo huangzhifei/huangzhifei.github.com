@@ -1,4 +1,5 @@
-http://www.jianshu.com/p/07c430fbde9e
+参照文章 [http://www.jianshu.com/p/07c430fbde9e]()
+
 
 UIStackView是iOS9之后推出的，主要包括了四大属性：axis、alignment、distribution、spacing。
 
@@ -44,4 +45,27 @@ typedef NS_ENUM(NSInteger, UIStackViewAlignment) {
 } NS_ENUM_AVAILABLE_IOS(9_0);
 
 ```
+
+### distribution
+
+设置轴方向上子视图的分布比例（如果axis是水平方向，也即设置子视图的宽度，如果axis是垂直方向，则是设置子视图的高度）
+
+```
+typedef NS_ENUM(NSInteger, UIStackViewDistribution) {
+
+	UIStackViewDistributionFill = 0,
+
+	UIStackViewDistributionFillEqually,
+
+	UIStackViewDistributionFillProportionally,
+
+	UIStackViewDistributionEqualSpacing,
+
+	UIStackViewDistributionEqualCentering,
+
+} NS_ENUM_AVAILABLE_IOS(9_0);
+
+```
+
+例子见UtilityKit/StackView
 
