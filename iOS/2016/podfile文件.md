@@ -25,7 +25,7 @@ pod 'Reachability',  '~> 3.0.0'
 
 end
 
-target :'Second' do
+target 'Second' do
 
 pod 'OpenUDID', '~> 1.0.0'
 
