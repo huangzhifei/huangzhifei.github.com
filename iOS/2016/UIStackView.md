@@ -1,5 +1,5 @@
 参照文章 [http://www.jianshu.com/p/07c430fbde9e]()
-
+参照文章 [http://www.jianshu.com/p/213702004d0d]()
 
 UIStackView是iOS9之后推出的，主要包括了四大属性：axis、alignment、distribution、spacing。
 
@@ -67,5 +67,15 @@ typedef NS_ENUM(NSInteger, UIStackViewDistribution) {
 
 ```
 
+UIStackViewDistributionFill 按添加view的优先级来拉伸view，但是貌似好像是平分的
+UIStackViewDistributionFillEqually 同上，好像设置了也是平分的
+UIStackViewDistributionFillProportionally 按比例拉伸
+UIStackViewDistributionEqualSpacing 保持子视图的宽高，所有子视图中间的间隔保持一致
+UIStackViewDistributionEqualCentering 所有子视图的中心之间的距离保持一致
+
 例子见UtilityKit/StackView
+
+### tip
+
+UIStackView 对子控件的布局是建立在 Autolayout 基础之上的……”，也就是说 stackView 不是以 frame 为基础，而是以自动布局，自动布局要依靠所谓的固有尺寸，而一个单独的 View 是没有固有尺寸的，所以很多时候直接用 view 是不会展示的，像用 label、button 之类有固尺寸的展示的很好，这点需要注意。
 
