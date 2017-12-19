@@ -13,3 +13,38 @@
 
 见下图
 
+![](https://huangzhifei.github.com/images/vpn-set.png)
+
+因为我使用的 ss FQ工具会自动代理，所以导致 charles 无法抓包，我解决的办法是抓包的时候关掉了 ss，有人说可以设置让vpn和charles共存，我懒得弄了。
+
+### 抓取HTTPS时，response是乱码
+
+1、安装SSL证书
+
+去 http://www.charlesproxy.com/ssl.zip 下载CA证书文件。
+
+2、解压该zip文件后，双击其中的.crt文件，这时候在弹出的菜单中选择“总是信任”
+
+3、从钥匙串访问中即可看到添加成功的证书
+
+4、菜单栏 Proxy -> SSL Proxyin Settings -> add，如下图
+
+![](https://huangzhifei.github.com/images/charles-https.png)
+
+配置完这个后，https 的请求就可以捕捉到了。
+
+
+### Charles 2种封包的视图，分别名为“Structure”和"Sequence"
+
+1、Structure视图将网络请求按访问的域名分类。
+
+2、Sequence视图将网络请求按访问的时间排序。
+
+3、过滤可以使用 find 功能，或者在 proxy setting 加永久的过滤规则
+
+### 截取iPhone上的网络封包
+
+这个功能直接看下面链接 [](http://www.infoq.com/cn/articles/network-packet-analysis-tool-charles)
+
+总结就是要让手机的网络和电脑的在一个路由下面，让电脑成为其代理。
+
