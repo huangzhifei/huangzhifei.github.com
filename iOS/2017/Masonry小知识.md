@@ -77,7 +77,9 @@ UIView *sv = [UIView new];
 	
 	
 ### 布局UIScrollView
-	
+
+参照文章[http://www.pixeldock.com/blog/uiscrollview-and-auto-layout/]()
+
 我们都知道UIScrollView是有点不一样的，他要先知道contentSize，但是了contentSize 又要依赖于他本身，看下面的代码我们如何实现这样一个自动布局
 	
 ```oc
@@ -88,10 +90,13 @@ UIView *sv = [UIView new];
    	 	make.edges.equalTo(sv).with.insets(UIEdgeInsetsMake(5,5,5,5));
 	}];
 	
+	// 小技巧：给所有的subView加一个container，然后设置container的约束与scrollView的关系
 	UIView *containter = [UIView new];
 	[scrollView addSubview:container];
 	[container mas_makeConstraints:^(MASConstraintMaker *make) {
     		make.edges.equalTo(scrollView);
+    		// 如果我们需要竖向的滑动 就把width设为和scrollview相同
+			// 如果需要横向的滑动 就把height设为和scrollview相同
     		make.width.equalTo(scrollView);
 	}];
 	
