@@ -1,3 +1,5 @@
+## git之无法pull仓库
+
 git 无法 pull 仓库，报错 refusing to merge unrelated histories
 
 场景：

@@ -1,4 +1,4 @@
-### iPhone X 和 iOS 11 适配
+## iPhone X 和 iOS 11 适配
 
 #### 1、缺少iPhone X的启动图
 

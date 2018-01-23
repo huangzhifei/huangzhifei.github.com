@@ -1,4 +1,6 @@
 
+## git之cherry-pick
+
 cherry-pick 可以选择某一个分支中的一个或多个commit来进行操作。
 
 比如：

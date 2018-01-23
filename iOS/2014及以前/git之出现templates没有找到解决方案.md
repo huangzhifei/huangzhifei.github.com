@@ -1,3 +1,5 @@
+## git之出现templates没有找到解决方案
+
 在 Mac 上用 SourceTree 克隆的时候, 偶尔出现了 
 warning: templates not found /usr/local/git/share/git-core/templates 警告，然后clone一直卡住，最开始以为是网络的问题，但是挂了VPN也这样，怎么办呢？
 

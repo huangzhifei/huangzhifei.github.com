@@ -1,3 +1,5 @@
+## 手势中cancelsTouchesInView属性
+
 UIGestureRecognizer 中一个属性，默认值为YES，使用场景：
 
 假设我们有一个 tableView，想增加一个手势来使用键盘消失

@@ -1,3 +1,5 @@
+## code sign error
+
 Command /usr/bin/codesign failed with exit code 1
 
 也就是一直 code sign error

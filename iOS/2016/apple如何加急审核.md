@@ -1,4 +1,6 @@
 
+## apple如何加急审核
+
 登录 iTunesconnect，点击右上角的“?”图标，选择“联系我们”，然后依次选择 “App Review”、“App Store Review”、“Request Expedited Review”，注意：选择完要点击 “Request an Expedited App Review”，不要去点击 Done。
 
 加急审核到底有没有次数的限制，苹果并没有官方的说明。只要你加急的理由写的充分，苹果都会让你加急，所以看各位最影帝的表演了（文章后面会有例子）

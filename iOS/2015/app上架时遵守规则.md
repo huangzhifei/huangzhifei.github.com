@@ -1,4 +1,4 @@
-###App store 上架规则中文
+##App store 上架规则中文
 
 [https://www.zhihu.com/question/20216099
 ]()

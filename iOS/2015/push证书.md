@@ -1,4 +1,4 @@
-### push证书
+## push证书
 
 可以参考百度的push sdk文档 [http://push.baidu.com/doc/ios/api]()
 
