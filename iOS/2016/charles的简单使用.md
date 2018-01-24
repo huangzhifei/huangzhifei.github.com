@@ -15,7 +15,7 @@
 
 见下图
 
-![](https://huangzhifei.github.com/images/vpn-set.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/vpn-set.png)
 
 因为我使用的 ss FQ工具会自动代理，所以导致 charles 无法抓包，我解决的办法是抓包的时候关掉了 ss，有人说可以设置让vpn和charles共存，我懒得弄了。
 
@@ -31,7 +31,7 @@
 
 4、菜单栏 Proxy -> SSL Proxyin Settings -> add，如下图
 
-![](https://huangzhifei.github.com/images/charles-https.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/charles-https.png)
 
 配置完这个后，https 的请求就可以捕捉到了。
 
