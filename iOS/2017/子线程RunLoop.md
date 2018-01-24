@@ -32,7 +32,7 @@ RunLoop 就是为线程而生的，线程的作用就是执行一个特定的任
 
 6、简单的运行逻辑如下图
 
-![](https://huangzhifei.github.com/images/RunLoop.png) 
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/RunLoop.png) 
 
 
 ### RunLoop 常见场景
