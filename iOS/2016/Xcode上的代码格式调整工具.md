@@ -6,7 +6,7 @@
 
 安装上面的app，运行时选择一个自定义的 clangformat 文件
 
-![](https://huangzhifei.github.com/images/xcodeClang.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/xcodeClang.png)
 
 clangformat文件下载
 
@@ -14,15 +14,15 @@ clangformat文件下载
 
 在 macOS Sierra（10.12）以上，插件会自动被加载，我们要去  系统偏好--->扩展 里面检查这个插件是否正确加载
 
-![](https://huangzhifei.github.com/images/xcodeClangSetting.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/xcodeClangSetting.png)
 
 如果正常加载了，就在去给此插件设置一个快捷键，方便我们使用。依然是在 系统偏好--->键盘里面，选择 App 快捷键，然后点击加号去给Xcode添加 Format Source Code，定义好快捷健
 
-![](https://huangzhifei.github.com/images/xcodeClangShortcut.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/xcodeClangShortcut.png)
 
 重新打开Xcode，在Editor菜单里面会出现一个 之前我们取的名字的插件（例如：Format Source Code）
 
-![](https://huangzhifei.github.com/images/xcodeClangShow.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/xcodeClangShow.png)
 
 如果后面没有出现快捷键，我们就去Xcode的偏好里面去设置吧
 
