@@ -17,7 +17,7 @@
 #### 3、导出对应的 p12 文件
 
 看下面的图片：
-![](https://huangzhifei.github.com/images/adx_open_cer.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/adx_open_cer.png)
 
 第一步不要展开，导出对应的 p12 文件;
 第二步展开，导出对应的key。
