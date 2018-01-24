@@ -12,14 +12,14 @@ XCode release 编译默认会生成 dSYM 文件， 而 Debug 编译默认不会�
 
 	XCode -> Build Settings -> Build Option -> Debug Information Format -> DWARF with dSYM File
 	
-![](https://huangzhifei.github.com/images/xcode-setting.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/xcode-setting.png)
 
 
 ### 开启Bitcode之后需要注意问题
 
 在点 “Upload to App Store” 上传到 App Store 服务器的时候需要声明符号文件（dSYM文件）的生成
 
-![](https://huangzhifei.github.com/images/BitcodedSYM.jpg)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/BitcodedSYM.jpg)
 
 ### 存在路径
 
