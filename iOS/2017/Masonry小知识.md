@@ -33,7 +33,7 @@ Masonry是一个轻量级的布局框架 拥有自己的描述语法 采用更�
 ```
 这些属性与NSLayoutAttrubute的对照表如下
 
-![](https://huangzhifei.github.com/images/masonry-1.jpg)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/masonry-1.jpg)
 
 
 1. 很多时候分不清 centerX 与 centerY，这里特意说明一下，他与正常的autolayout是反的
