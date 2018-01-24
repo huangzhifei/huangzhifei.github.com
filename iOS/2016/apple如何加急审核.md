@@ -9,21 +9,21 @@
 
 或者参考上面说的步骤进入，见下图
 
-![](https://huangzhifei.github.com/images/iTunes-Contact-us.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/iTunes-Contact-us.png)
 
 在“I would like to”选择加急审核(默认的就是)，选择区号+86(中国)，输入你的手机号。
 
-![](https://huangzhifei.github.com/images/iTunes-Contact-App.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/iTunes-Contact-App.png)
 
 输入你的 AppName 和 AppleID 在“我的 APP”里可以查看，Related Apps 是关联App，没有则忽略。
 
-![](https://huangzhifei.github.com/images/App信息.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/App信息.png)
 
 选择 Critical Bug Fix，bug类型的通过可能性比较大, Explanation 中可以填写中文，注意:最好把出现问题的操作步骤写上！
 
-![](https://huangzhifei.github.com/images/App-Bug-Fix1.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/App-Bug-Fix1.png)
 
-![](https://huangzhifei.github.com/images/App-Bug-Fix2.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/App-Bug-Fix2.png)
 
 最后点击 send 就 ok 了。
 
