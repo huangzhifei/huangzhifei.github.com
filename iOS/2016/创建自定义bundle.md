@@ -7,7 +7,7 @@ bundle 文件在运行的时候不会被编译，此文件最好是存放一些�
 ##### 1、右键 -> New File -> iOS -> Resource -> Settings Bundle
 见下图：
 
-![](https://huangzhifei.github.com/images/bundle.png)
+![](https://github.com/huangzhifei/huangzhifei.github.com/raw/master/images/bundle.png)
 
 ##### 2、随便起个名字就行了，不需要去带.bundle后缀
 
